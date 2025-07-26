@@ -50,6 +50,12 @@ Return STRICT JSON with this schema:
   ],
   "notes": "optional"
 }
+
+IMPORTANT: This is a vanilla JavaScript app (not React). The main files are:
+- test-app/index.html (HTML structure)
+- test-app/main.js (JavaScript functionality)
+- test-app/style.css (CSS styling)
+
 Only JSON. Be concise. Prefer minimal viable fixes first.
 """
 
