@@ -49,6 +49,13 @@ npm run dev
 
 ### 4. Run the Vibe Coding Loop
 
+#### Demo Mode (No API Key Required)
+```bash
+# Run the demo to see how the system works
+./run_demo.sh
+```
+
+#### Full Mode (Requires API Key)
 1. Start your development server (if using Vite):
    ```bash
    npm run dev
@@ -57,6 +64,8 @@ npm run dev
 2. Run the automated coding loop:
    ```bash
    python playloop.py
+   # or
+   ./run_vibe_test.sh
    ```
 
 ## How It Works
@@ -76,9 +85,13 @@ npm run dev
 ## Files
 
 - `playloop.py` - Main automation script
+- `demo_vibe_loop.py` - Demo version (no API required)
+- `run_demo.sh` - Demo runner script
+- `run_vibe_test.sh` - Full vibe loop runner
 - `setup_env.sh` - Environment activation helper
 - `setup_deepinfra.sh` - DeepInfra API setup (alternative)
 - `env_template.txt` - Environment variables template
+- `test_setup.py` - Environment testing script
 - `ai_loop_artifacts/` - Generated screenshots and analysis files
 
 ## Tips
@@ -90,6 +103,16 @@ npm run dev
 
 ## Troubleshooting
 
+### API Connection Issues
 - Make sure your API key is valid and has sufficient credits
+- Check your internet connection
+- Try running the demo first: `./run_demo.sh`
+
+### App Not Starting
 - Ensure your dev server is running on the expected port (default: 5173)
-- Check the `ai_loop_artifacts/` directory for debugging information 
+- Check that all dependencies are installed: `python test_setup.py`
+
+### Debugging
+- Check the `ai_loop_artifacts/` directory for screenshots and analysis files
+- Run `python test_setup.py` to verify your environment
+- Use the demo mode to test the workflow without API calls 
